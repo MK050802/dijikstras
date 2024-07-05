@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from 'C:/Users/suraj/Desktop/pathFinder/Pathfinding/src/PathfindingVisualizer/gfg-new-logo.png';
+// import logo from 'C:/Users/suraj/Desktop/pathFinder/Pathfinding/src/PathfindingVisualizer/gfg-new-logo.png';
 import Node from './Node/Node';
 import {dijkstra, getNodesInShortestPathOrder} from '../algorithms/dijkstra';
 
@@ -79,8 +79,8 @@ export default class PathfindingVisualizer extends Component {
 
     return (
       <>
-      <div className="logo">
-          <img src={logo} width="100" height="50" />
+        <div className="logo">
+          <h1>DijkstraMap</h1>
         </div>
         <button onClick={() => this.visualizeDijkstra()}>
           Visualize Dijkstra's Algorithm
@@ -89,12 +89,9 @@ export default class PathfindingVisualizer extends Component {
           {grid.map((row, rowIdx) => {
             return (
               <div key={rowIdx}>
-                
                 {row.map((node, nodeIdx) => {
                   const {row, col, isFinish, isStart, isWall} = node;
                   return (
-
-                    
                     <Node
                       key={nodeIdx}
                       col={col}
@@ -108,7 +105,6 @@ export default class PathfindingVisualizer extends Component {
                       }
                       onMouseUp={() => this.handleMouseUp()}
                       row={row}></Node>
-                      
                   );
                 })}
               </div>
