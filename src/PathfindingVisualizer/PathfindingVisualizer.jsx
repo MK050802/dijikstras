@@ -80,7 +80,7 @@ export default class PathfindingVisualizer extends Component {
     return (
       <>
         <div className="logo">
-          <h1>DijkstraMap-Shortest_Path_Finder</h1>
+          <h1>DijkstraMap-Shortest_Path_Finder_Visualizer</h1>
         </div>
         <button onClick={() => this.visualizeDijkstra()}>
           Visualize Dijkstra's Algorithm
